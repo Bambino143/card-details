@@ -1,4 +1,4 @@
-/* so for this hard to read code i just wanted everything to work without
+/* so sorry for this hard to read code i just wanted everything to work without
  actually focusing on the readability of my code */
 
 $(document).ready(() => {
