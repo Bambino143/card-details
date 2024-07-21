@@ -14,9 +14,8 @@ $(document).ready(() => {
   let name;
   $("#number").on("input", () => {
     let displayNum = $("#number").val();
-    let rg = /^.{0,16}$/g;
-    let display = displayNum.match(rg);
-    let finalDisplay = display[0].replace(/(.{4})/g, "$1 ");
+    let display = displayNum;
+    let finalDisplay = display.replace(/(.{4})/g, "$1 ");
 
     let reg = /[a-zA-Z]/g;
 
@@ -54,30 +53,17 @@ $(document).ready(() => {
 
   $(".cvc").on("input", () => {
     let displayName = $(".cvc").val();
-    let reg = /^.{0,3}$/g;
-    let display = displayName.match(reg);
-    $("#cvc-back").text(display);
-    if (displayName.length > 3) {
-      $("#💕").text(`3 digits only`);
-      $("#💕").addClass("error");
-    } else {
-      $("#💕").text("");
-      $("#💕").removeClass("error");
-    }
+    $("#cvc-back").text(displayName);
   });
 
   $(".mm").on("input", () => {
     let displayName = $(".mm").val();
-    let reg = /^.{0,2}$/g;
-    let display = displayName.match(reg);
-    $("#mm").text(display);
+    $("#mm").text(displayName);
   });
 
   $(".yy").on("input", () => {
     let displayName = $(".yy").val();
-    let reg = /^.{0,2}$/g;
-    let display = displayName.match(reg);
-    $("#yy").text(display);
+    $("#yy").text(displayName);
   });
 
   $("#confirm").on("click", () => {
